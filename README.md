@@ -26,3 +26,31 @@ echo n | gunzip data/kddcup.data_10_percent.gz
 > This is the data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99 The Fifth International Conference on Knowledge Discovery and Data Mining. The competition task was to build a network intrusion detector, a predictive model capable of distinguishing between `bad` connections, called intrusions or attacks, and `good` normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment.
 
 source: [KDD Cup 1999 Data](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html)
+
+## Python Virtualenvironment management
+
+1. Create virtual environment
+
+    ```bash
+    make env-create
+    ```
+
+2. Activate virtual environment
+
+    ```bash
+    source ./venv/bin/activate
+    ```
+
+3. Install dependencies
+
+    ```bash
+    make env-install
+    ```
+
+4. (During development) Update dependencies. First edit the `pyproject.toml` file, then run:
+
+    ```bash
+    make env-update
+    ```
+
+For more info on this python environment workflow, please check [my blogpost](https://claudiosalvatorearcidiacono.github.io/blog/software-engineering/2022/05/28/python-dependency-management-workflow-using-standard-tools.html) :)

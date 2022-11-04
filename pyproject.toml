@@ -1,0 +1,23 @@
+[project]
+name = "intrusion_detection"
+description = "Model and API server for detecting network intrusions in military networks."
+version = "0.1.0"
+authors = [
+    { name = "Claudio Salvatore Arcidiacono", email = "claudioarcidiacono94@gmail.com" }
+]
+dependencies = [
+    "setuptools",
+    "jupyter >=1,<2",
+    "scikit-learn >=1.1.2,<2",
+    "lightgbm >=3.3.2,<4",
+    "pandas >=1.5.0,<2",
+    "seaborn >=0.12.0,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+doc = ["mkdocs"]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
