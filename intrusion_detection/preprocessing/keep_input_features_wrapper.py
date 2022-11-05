@@ -1,17 +1,22 @@
-class KeepInputFeaturesWrapper:
+from sklearn.base import BaseEstimator, TransformerMixin
+
+
+class KeepInputFeaturesWrapper(BaseEstimator, TransformerMixin):
     def __init__(self, wrapped_transformer, rename_suffix=None):
         self.wrapped_transformer = wrapped_transformer
         self.rename_suffix = rename_suffix
 
+    def fit(self, *args, **kwargs):
+        self.wrapped_transformer.fit(*args, **kwargs)
+        return self
+
     def transform(self, X, *args, **kwargs):
-        variables = self.wrapped_transformer.variables_
-        to_keep = X[variables]
+        to_keep = X[self.variables_].copy()
         X = self.wrapped_transformer.transform(X, *args, **kwargs)
-        if self.rename_suffix:
-            X = X.rename(
-                columns={var: f"{var}{self.rename_suffix}" for var in variables}
-            )
-        X[variables] = to_keep
+        X = X.rename(
+            columns={var: f"{var}{self.rename_suffix}" for var in self.variables_}
+        )
+        X[self.variables_] = to_keep
         return X
 
     def __getattr__(self, attr):
