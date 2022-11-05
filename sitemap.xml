@@ -21,7 +21,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/notebooks/exploration/feature_engineering/</loc>
+         <lastmod>2022-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/notebooks/exploration/target_definition/</loc>
+         <lastmod>2022-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/notebooks/modelling/modelling_anomalies/</loc>
          <lastmod>2022-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>

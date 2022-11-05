@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/notebooks/exploration/target_definition/">
+        <link rel="canonical" href="https://example.com/notebooks/modelling/modelling_anomalies/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
     
     
       
-        <title>Target Definition - intrusion_detection</title>
+        <title>Modelling anomalies - intrusion_detection</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Target Definition
+              Modelling anomalies
             
           </span>
         </div>
@@ -239,7 +239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exploratory_data_analysis/" class="md-nav__link">
+      <a href="../../exploration/exploratory_data_analysis/" class="md-nav__link">
         Exploratory Data Analysis
       </a>
     </li>
@@ -252,61 +252,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Target Definition
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../exploration/target_definition/" class="md-nav__link">
         Target Definition
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choose-the-anomalous-classes" class="md-nav__link">
-    Choose the anomalous classes
-  </a>
-  
-    <nav class="md-nav" aria-label="Choose the anomalous classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-target" class="md-nav__link">
-    Define Target
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -370,7 +320,7 @@
                   
 
 
-  <h1>Target Definition</h1>
+  <h1>Modelling anomalies</h1>
 
 <script>
 (function (global, factory) {
@@ -1402,7 +1352,19 @@ Licensed under the Apache License, Version 2.0.
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --><div class="jupyter-wrapper"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <!-- End of mathjax configuration --><div class="jupyter-wrapper">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In order to simulate a realistic scenario, where labels are unavailable, in order to model the problem of detecting cyber attacks the target labels will not be used during modelling and they will only be used for the final evaluation.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1463,7 +1425,7 @@ Licensed under the Apache License, Version 2.0.
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
 
 <span class="kn">from</span> <span class="nn">intrusion_detection.load_input_data</span> <span class="kn">import</span> <span class="n">load_df</span>
-<span class="kn">from</span> <span class="nn">intrusion_detection.preprocessing.preprocessing</span> <span class="kn">import</span> <span class="n">remove_dot_from_attack_type_classes</span>
+<span class="kn">from</span> <span class="nn">intrusion_detection.preprocessing</span> <span class="kn">import</span> <span class="n">preprocess_data</span>
 <span class="kn">from</span> <span class="nn">intrusion_detection.target_definition</span> <span class="kn">import</span> <span class="n">define_target</span>
 </pre></div>
 <div id="cell-2" class="clipboard-copy-txt">%autoreload
@@ -1474,7 +1436,7 @@ import matplotlib.pyplot as plt
 from IPython.display import display, Markdown
 
 from intrusion_detection.load_input_data import load_df
-from intrusion_detection.preprocessing.preprocessing import remove_dot_from_attack_type_classes
+from intrusion_detection.preprocessing import preprocess_data
 from intrusion_detection.target_definition import define_target
 </div>
     
@@ -1510,13 +1472,13 @@ from intrusion_detection.target_definition import define_target
     <span class="n">file_path</span><span class="o">=</span><span class="s2">&quot;../../../data/kddcup.data_10_percent&quot;</span><span class="p">,</span>
     <span class="n">header_file</span><span class="o">=</span><span class="s2">&quot;../../../data/kddcup.names&quot;</span>
 <span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">remove_dot_from_attack_type_classes</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">df = load_df(
     file_path="../../../data/kddcup.data_10_percent",
     header_file="../../../data/kddcup.names"
 )
-df = remove_dot_from_attack_type_classes(df)</div>
+df = preprocess_data(df)</div>
     
         </div>
     </div>
@@ -2270,27 +2232,6 @@ display(Markdown(f"For the second problem, we have an imbalance problem with an 
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../exploratory_data_analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exploratory Data Analysis" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Exploratory Data Analysis
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
