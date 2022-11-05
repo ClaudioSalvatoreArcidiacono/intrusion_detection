@@ -31,3 +31,7 @@ In order to train and evaluate the model, data from the 1999 edition of the KDD 
     ```
 
 For more info on this python environment workflow, please check [my blogpost](https://claudiosalvatorearcidiacono.github.io/blog/software-engineering/2022/05/28/python-dependency-management-workflow-using-standard-tools.html) :)
+
+## Documentation
+
+Full documentation available [Here](https://claudiosalvatorearcidiacono.github.io/intrusion_detection/)

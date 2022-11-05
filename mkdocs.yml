@@ -1,0 +1,37 @@
+site_name: intrusion_detection
+site_url: https://example.com/
+
+nav:
+  - Home: index.md
+  - Data: data.md
+  - Exploratory Data Analysis: notebooks/exploration/exploratory_data_analysis.ipynb
+  - Target Definition: notebooks/exploration/target_definition.ipynb
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      # show_input: false
+      # no_input: true
+      include_source: True
+
+theme:
+  name: material
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode

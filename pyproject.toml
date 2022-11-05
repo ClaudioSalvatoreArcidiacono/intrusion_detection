@@ -16,7 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "flake8", "black", "isort"]
-doc = ["mkdocs"]
+doc = ["mkdocs", "mkdocs-jupyter", "mkdocs-material"]
 
 [build-system]
 build-backend = "flit_core.buildapi"
