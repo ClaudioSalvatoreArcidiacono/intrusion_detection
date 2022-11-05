@@ -9,13 +9,13 @@ dependencies = [
     "setuptools",
     "jupyter >=1,<2",
     "scikit-learn >=1.1.2,<2",
-    "lightgbm >=3.3.2,<4",
+    "pyod",
     "pandas >=1.5.0,<2",
     "seaborn >=0.12.0,<1",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "flake8", "black", "isort"]
 doc = ["mkdocs"]
 
 [build-system]
