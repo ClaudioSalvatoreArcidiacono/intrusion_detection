@@ -29,7 +29,7 @@ def get_preprocessing_pipeline():
             (
                 "frequency_encoder",
                 KeepInputFeaturesWrapper(
-                    CountFrequencyEncoder(encoding_method="frequency"),
+                    CountFrequencyEncoder(encoding_method="frequency", unseen="encode"),
                     rename_suffix="_freq",
                 ),
             ),
