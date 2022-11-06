@@ -2,37 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/data/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notebooks/play_with_pyod/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notebooks/exploration/exploratory_data_analysis/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notebooks/exploration/feature_engineering/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notebooks/exploration/target_definition/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/notebooks/modelling/modelling_anomalies%2Bddos/</loc>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/notebooks/modelling/modelling_anomalies/</loc>
-         <lastmod>2022-11-05</lastmod>
+         <lastmod>2022-11-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/notebooks/modelling/modelling_ddos/</loc>
+         <lastmod>2022-11-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

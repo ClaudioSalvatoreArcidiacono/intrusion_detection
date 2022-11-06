@@ -312,10 +312,62 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dataset-after-preprocessing" class="md-nav__link">
+    Dataset after preprocessing
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_anomalies/" class="md-nav__link">
+        Modelling Anomalies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_ddos/" class="md-nav__link">
+        Modelling DDOS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_anomalies%2Bddos/" class="md-nav__link">
+        Combine Models
+      </a>
     </li>
   
 
@@ -354,6 +406,13 @@
         <li class="md-nav__item">
   <a href="#categorical-features-encoding" class="md-nav__link">
     Categorical Features Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-after-preprocessing" class="md-nav__link">
+    Dataset after preprocessing
   </a>
   
 </li>
@@ -1411,7 +1470,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1444,7 +1503,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The input dataset already contains a lot of engineered features. Moreover, I lack the expertise to suggest which features would make sense to engineer. For this reason, I decided not to engineer new features, but to focus on processing the exiting ones. The preprocessing pipeline that has been proposed in this project is the following:</p>
+<p>The input dataset already contains a lot of engineered features. Moreover, I lack the expertise to suggest which features would make sense to engineer. For this reason, I decided not to engineer new features, but to focus on precessing the exiting ones. The preprocessing pipeline that has been proposed in this project is the following:</p>
 
 </div>
 </div>
@@ -1455,7 +1514,7 @@ Licensed under the Apache License, Version 2.0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1499,7 +1558,7 @@ set_config(display="diagram")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1536,15 +1595,15 @@ preprocessing_pipeline</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<style>#sk-container-id-13 {color: black;background-color: white;}#sk-container-id-13 pre{padding: 0;}#sk-container-id-13 div.sk-toggleable {background-color: white;}#sk-container-id-13 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-13 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-13 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-13 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-13 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-13 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-13 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-13 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-13 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-13 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-13 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-13 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-13 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-13 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-13 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-13 div.sk-item {position: relative;z-index: 1;}#sk-container-id-13 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-13 div.sk-item::before, #sk-container-id-13 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-13 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-13 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-13 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-13 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-13 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-13 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-13 div.sk-label-container {text-align: center;}#sk-container-id-13 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-13 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-13" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;drop_target&#x27;, DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])),
+<style>#sk-container-id-5 {color: black;background-color: white;}#sk-container-id-5 pre{padding: 0;}#sk-container-id-5 div.sk-toggleable {background-color: white;}#sk-container-id-5 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-5 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-5 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-5 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-5 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-5 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-5 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-5 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-5 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-5 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-5 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-5 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-5 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-5 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-5 div.sk-item {position: relative;z-index: 1;}#sk-container-id-5 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-5 div.sk-item::before, #sk-container-id-5 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-5 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-5 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-5 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-5 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-5 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-5 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-5 div.sk-label-container {text-align: center;}#sk-container-id-5 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-5 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-5" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;drop_target&#x27;, DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])),
                 (&#x27;outlier_removal&#x27;,
                  Winsorizer(add_indicators=True, capping_method=&#x27;quantiles&#x27;,
-                            fold=0.01, variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])),
+                            fold=0.05, variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])),
                 (&#x27;frequency_encoder&#x27;,
                  KeepInputFeaturesWrapper(rename_suffix=&#x27;_freq&#x27;,
                                           wrapped_transformer=CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;))),
@@ -1552,10 +1611,10 @@ preprocessing_pipeline</div>
                  RareLabelEncoder(n_categories=2, tol=0.01)),
                 (&#x27;one_hot_encoder&#x27;, OneHotEncoder()),
                 (&#x27;min_max_scaler&#x27;,
-                 SklearnTransformerWrapper(transformer=MinMaxScaler()))])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-105" type="checkbox" ><label for="sk-estimator-id-105" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;drop_target&#x27;, DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])),
+                 SklearnTransformerWrapper(transformer=MinMaxScaler()))])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-45" type="checkbox" ><label for="sk-estimator-id-45" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;drop_target&#x27;, DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])),
                 (&#x27;outlier_removal&#x27;,
                  Winsorizer(add_indicators=True, capping_method=&#x27;quantiles&#x27;,
-                            fold=0.01, variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])),
+                            fold=0.05, variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])),
                 (&#x27;frequency_encoder&#x27;,
                  KeepInputFeaturesWrapper(rename_suffix=&#x27;_freq&#x27;,
                                           wrapped_transformer=CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;))),
@@ -1563,9 +1622,9 @@ preprocessing_pipeline</div>
                  RareLabelEncoder(n_categories=2, tol=0.01)),
                 (&#x27;one_hot_encoder&#x27;, OneHotEncoder()),
                 (&#x27;min_max_scaler&#x27;,
-                 SklearnTransformerWrapper(transformer=MinMaxScaler()))])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-106" type="checkbox" ><label for="sk-estimator-id-106" class="sk-toggleable__label sk-toggleable__label-arrow">DropFeatures</label><div class="sk-toggleable__content"><pre>DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-107" type="checkbox" ><label for="sk-estimator-id-107" class="sk-toggleable__label sk-toggleable__label-arrow">Winsorizer</label><div class="sk-toggleable__content"><pre>Winsorizer(add_indicators=True, capping_method=&#x27;quantiles&#x27;, fold=0.01,
-           variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])</pre></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-108" type="checkbox" ><label for="sk-estimator-id-108" class="sk-toggleable__label sk-toggleable__label-arrow">frequency_encoder: KeepInputFeaturesWrapper</label><div class="sk-toggleable__content"><pre>KeepInputFeaturesWrapper(rename_suffix=&#x27;_freq&#x27;,
-                         wrapped_transformer=CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-109" type="checkbox" ><label for="sk-estimator-id-109" class="sk-toggleable__label sk-toggleable__label-arrow">wrapped_transformer: CountFrequencyEncoder</label><div class="sk-toggleable__content"><pre>CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-110" type="checkbox" ><label for="sk-estimator-id-110" class="sk-toggleable__label sk-toggleable__label-arrow">CountFrequencyEncoder</label><div class="sk-toggleable__content"><pre>CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;)</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-111" type="checkbox" ><label for="sk-estimator-id-111" class="sk-toggleable__label sk-toggleable__label-arrow">RareLabelEncoder</label><div class="sk-toggleable__content"><pre>RareLabelEncoder(n_categories=2, tol=0.01)</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-112" type="checkbox" ><label for="sk-estimator-id-112" class="sk-toggleable__label sk-toggleable__label-arrow">OneHotEncoder</label><div class="sk-toggleable__content"><pre>OneHotEncoder()</pre></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-113" type="checkbox" ><label for="sk-estimator-id-113" class="sk-toggleable__label sk-toggleable__label-arrow">min_max_scaler: SklearnTransformerWrapper</label><div class="sk-toggleable__content"><pre>SklearnTransformerWrapper(transformer=MinMaxScaler())</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-114" type="checkbox" ><label for="sk-estimator-id-114" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-115" type="checkbox" ><label for="sk-estimator-id-115" class="sk-toggleable__label sk-toggleable__label-arrow">MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div></div></div></div></div></div></div></div></div></div>
+                 SklearnTransformerWrapper(transformer=MinMaxScaler()))])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-46" type="checkbox" ><label for="sk-estimator-id-46" class="sk-toggleable__label sk-toggleable__label-arrow">DropFeatures</label><div class="sk-toggleable__content"><pre>DropFeatures(features_to_drop=[&#x27;attack_type&#x27;])</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-47" type="checkbox" ><label for="sk-estimator-id-47" class="sk-toggleable__label sk-toggleable__label-arrow">Winsorizer</label><div class="sk-toggleable__content"><pre>Winsorizer(add_indicators=True, capping_method=&#x27;quantiles&#x27;, fold=0.05,
+           variables=[&#x27;src_bytes&#x27;, &#x27;dst_bytes&#x27;])</pre></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-48" type="checkbox" ><label for="sk-estimator-id-48" class="sk-toggleable__label sk-toggleable__label-arrow">frequency_encoder: KeepInputFeaturesWrapper</label><div class="sk-toggleable__content"><pre>KeepInputFeaturesWrapper(rename_suffix=&#x27;_freq&#x27;,
+                         wrapped_transformer=CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-49" type="checkbox" ><label for="sk-estimator-id-49" class="sk-toggleable__label sk-toggleable__label-arrow">wrapped_transformer: CountFrequencyEncoder</label><div class="sk-toggleable__content"><pre>CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-50" type="checkbox" ><label for="sk-estimator-id-50" class="sk-toggleable__label sk-toggleable__label-arrow">CountFrequencyEncoder</label><div class="sk-toggleable__content"><pre>CountFrequencyEncoder(encoding_method=&#x27;frequency&#x27;)</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-51" type="checkbox" ><label for="sk-estimator-id-51" class="sk-toggleable__label sk-toggleable__label-arrow">RareLabelEncoder</label><div class="sk-toggleable__content"><pre>RareLabelEncoder(n_categories=2, tol=0.01)</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-52" type="checkbox" ><label for="sk-estimator-id-52" class="sk-toggleable__label sk-toggleable__label-arrow">OneHotEncoder</label><div class="sk-toggleable__content"><pre>OneHotEncoder()</pre></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-53" type="checkbox" ><label for="sk-estimator-id-53" class="sk-toggleable__label sk-toggleable__label-arrow">min_max_scaler: SklearnTransformerWrapper</label><div class="sk-toggleable__content"><pre>SklearnTransformerWrapper(transformer=MinMaxScaler())</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-54" type="checkbox" ><label for="sk-estimator-id-54" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-55" type="checkbox" ><label for="sk-estimator-id-55" class="sk-toggleable__label sk-toggleable__label-arrow">MinMaxScaler</label><div class="sk-toggleable__content"><pre>MinMaxScaler()</pre></div></div></div></div></div></div></div></div></div></div></div></div>
 </div>
 
 </div>
@@ -1582,7 +1641,7 @@ preprocessing_pipeline</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="numerical-features-preprocessing">Numerical Features preprocessing<a class="anchor-link" href="#numerical-features-preprocessing">&#182;</a></h2><p>The first step of the pipeline is used to deal with outlier values. Similarly to what has been already mentioned in the exploratory data analysis section, this step will cap the features <code>src_bytes</code> and <code>dst_bytes</code> to the 99th percentile and will ad an indicator column specifying when the column values have been capped. All features (numerical and not) are scaled between 0 and 1 in the last step of the pipeline.</p>
+<h2 id="numerical-features-preprocessing">Numerical Features preprocessing<a class="anchor-link" href="#numerical-features-preprocessing">&#182;</a></h2><p>The first step of the pipeline is used to deal with outlier values. Similarly to what has been already mentioned in the exploratory data analysis section, this step will cap the features <code>src_bytes</code> and <code>dst_bytes</code> to the 99th percentile and will add an indicator column specifying when the column values have been capped. All features (numerical and not) are scaled between 0 and 1 in the last step of the pipeline.</p>
 
 </div>
 </div>
@@ -1599,13 +1658,24 @@ preprocessing_pipeline</div>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="dataset-after-preprocessing">Dataset after preprocessing<a class="anchor-link" href="#dataset-after-preprocessing">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1645,7 +1715,7 @@ df = remove_dot_from_attack_type_classes(df)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -1661,10 +1731,10 @@ df = remove_dot_from_attack_type_classes(df)</div>
             </clipboard-copy>
         </div>
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">preprocessed_df</span> <span class="o">=</span> <span class="n">preprocessing_pipeline</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-<span class="n">preprocessed_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<span class="n">preprocessed_df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">percentiles</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 <div id="cell-5" class="clipboard-copy-txt">preprocessed_df = preprocessing_pipeline.fit_transform(df)
-preprocessed_df.describe().T</div>
+preprocessed_df.describe(percentiles=[0.01, 0.05, .25, .5, .75, 0.95, 0.99]).T</div>
     
         </div>
     </div>
@@ -1682,7 +1752,7 @@ preprocessed_df.describe().T</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -1709,9 +1779,13 @@ preprocessed_df.describe().T</div>
       <th>mean</th>
       <th>std</th>
       <th>min</th>
+      <th>1%</th>
+      <th>5%</th>
       <th>25%</th>
       <th>50%</th>
       <th>75%</th>
+      <th>95%</th>
+      <th>99%</th>
       <th>max</th>
     </tr>
   </thead>
@@ -1725,6 +1799,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.001509</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1733,8 +1811,12 @@ preprocessed_df.describe().T</div>
       <td>0.822097</td>
       <td>0.241090</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.644681</td>
       <td>0.644681</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -1744,8 +1826,12 @@ preprocessed_df.describe().T</div>
       <td>0.689304</td>
       <td>0.369005</td>
       <td>0.0</td>
+      <td>0.000714</td>
+      <td>0.025714</td>
       <td>0.394074</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -1755,31 +1841,43 @@ preprocessed_df.describe().T</div>
       <td>0.810397</td>
       <td>0.344788</td>
       <td>0.0</td>
+      <td>0.070996</td>
+      <td>0.070996</td>
       <td>1.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>src_bytes</th>
       <td>494021.0</td>
-      <td>0.257371</td>
-      <td>0.205174</td>
+      <td>0.578597</td>
+      <td>0.436075</td>
       <td>0.0</td>
-      <td>0.018791</td>
-      <td>0.217137</td>
-      <td>0.430934</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.043605</td>
+      <td>0.503876</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>dst_bytes</th>
       <td>494021.0</td>
-      <td>0.035271</td>
-      <td>0.141739</td>
+      <td>0.083433</td>
+      <td>0.245432</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1790,6 +1888,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1802,6 +1904,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1812,6 +1918,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1824,6 +1934,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1834,6 +1948,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1846,6 +1964,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1856,6 +1978,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1868,6 +1994,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1878,6 +2008,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1890,6 +2024,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1900,6 +2038,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1912,6 +2054,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1922,6 +2068,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>1.0</td>
     </tr>
@@ -1934,6 +2084,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>0.0</td>
     </tr>
     <tr>
@@ -1944,6 +2098,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
       <td>0.000000</td>
       <td>0.0</td>
     </tr>
@@ -1956,6 +2114,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -1964,8 +2126,12 @@ preprocessed_df.describe().T</div>
       <td>0.650266</td>
       <td>0.417118</td>
       <td>0.0</td>
+      <td>0.001957</td>
+      <td>0.001957</td>
       <td>0.228963</td>
       <td>0.998043</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -1975,8 +2141,12 @@ preprocessed_df.describe().T</div>
       <td>0.573203</td>
       <td>0.482041</td>
       <td>0.0</td>
+      <td>0.001957</td>
+      <td>0.001957</td>
       <td>0.019569</td>
       <td>0.998043</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -1989,6 +2159,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2000,6 +2174,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2011,6 +2189,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2022,6 +2204,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2030,8 +2216,12 @@ preprocessed_df.describe().T</div>
       <td>0.791547</td>
       <td>0.388189</td>
       <td>0.0</td>
+      <td>0.010000</td>
+      <td>0.030000</td>
       <td>1.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2044,6 +2234,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.07</td>
+      <td>0.208000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2055,6 +2249,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.14</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2063,8 +2261,12 @@ preprocessed_df.describe().T</div>
       <td>0.911650</td>
       <td>0.253903</td>
       <td>0.0</td>
+      <td>0.011765</td>
+      <td>0.129412</td>
       <td>1.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2074,8 +2276,12 @@ preprocessed_df.describe().T</div>
       <td>0.739865</td>
       <td>0.415845</td>
       <td>0.0</td>
+      <td>0.003922</td>
+      <td>0.011765</td>
       <td>0.180392</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2085,8 +2291,12 @@ preprocessed_df.describe().T</div>
       <td>0.753780</td>
       <td>0.410781</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.020000</td>
       <td>0.410000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2098,7 +2308,11 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.040000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.04</td>
+      <td>0.08</td>
+      <td>0.820000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2108,7 +2322,11 @@ preprocessed_df.describe().T</div>
       <td>0.481309</td>
       <td>0.0</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2121,6 +2339,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.03</td>
+      <td>0.150000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2132,6 +2354,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2143,6 +2369,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2154,6 +2384,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2165,28 +2399,40 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>src_bytes_right</th>
       <td>494021.0</td>
-      <td>0.010002</td>
-      <td>0.099507</td>
+      <td>0.022284</td>
+      <td>0.147607</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
       <th>dst_bytes_right</th>
       <td>494021.0</td>
-      <td>0.009998</td>
-      <td>0.099487</td>
+      <td>0.049988</td>
+      <td>0.217920</td>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2197,6 +2443,10 @@ preprocessed_df.describe().T</div>
       <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2209,6 +2459,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2218,7 +2472,11 @@ preprocessed_df.describe().T</div>
       <td>0.494484</td>
       <td>0.0</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2231,6 +2489,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2242,6 +2504,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2253,6 +2519,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2264,6 +2534,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2273,7 +2547,11 @@ preprocessed_df.describe().T</div>
       <td>0.495131</td>
       <td>0.0</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2286,6 +2564,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2297,6 +2579,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2305,8 +2591,12 @@ preprocessed_df.describe().T</div>
       <td>0.766040</td>
       <td>0.423347</td>
       <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>1.000000</td>
       <td>1.000000</td>
+      <td>1.00</td>
+      <td>1.00</td>
       <td>1.000000</td>
       <td>1.0</td>
     </tr>
@@ -2319,6 +2609,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2330,6 +2624,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -2341,6 +2639,10 @@ preprocessed_df.describe().T</div>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>1.000000</td>
       <td>1.0</td>
     </tr>
   </tbody>
@@ -2354,6 +2656,18 @@ preprocessed_df.describe().T</div>
 
 </div>
 
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>After preprocessing we notice that many features are quasi-constant. For example, the feature <code>land</code> is <code>0</code> for more than 99% of the cases. In a realistic situation, I would try to get some extra domain knowledge from experts and eventually drop such features. In a supervised problem with a more balanced dataset, I would definitely remove such features from my dataset. However, since the purpose of this exercise is to detect anomalies, which are very rare, I think it is a good idea to keep those quasi-constant features for the anomaly detection part. This will probably result in considering the values that deviate from the constant as anomalies, but probably it is not wrong do to so.</p>
+
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2393,6 +2707,21 @@ preprocessed_df.describe().T</div>
           </div>
         </a>
       
+      
+        
+        <a href="../../modelling/modelling_anomalies/" class="md-footer__link md-footer__link--next" aria-label="Next: Modelling Anomalies" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Modelling Anomalies
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

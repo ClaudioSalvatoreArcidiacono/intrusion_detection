@@ -326,6 +326,51 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_anomalies/" class="md-nav__link">
+        Modelling Anomalies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_ddos/" class="md-nav__link">
+        Modelling DDOS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelling/modelling_anomalies%2Bddos/" class="md-nav__link">
+        Combine Models
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1417,7 +1462,19 @@ Licensed under the Apache License, Version 2.0.
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --><div class="jupyter-wrapper"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <!-- End of mathjax configuration --><div class="jupyter-wrapper">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In this notebook we aim at defining a target for evaluating our model.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1863,8 +1920,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>From the plot above we notice that the 3 most frequent classes for attack type are <code>smurf</code> and <code>neptune</code> and <code>normal</code>. All other attack types are very rare. The class <code>normal</code> represents normal connections that are not to be considered as cyber attack. The classes <code>smurf</code> and <code>neptune</code> are DDOS attacks. DDOS attacks are a type of cyber attacks where attackers try to break a system by overloading it with requests.</p>
-<p>The strategy that I plan to utilize to model this behavior and to distinguish the <code>normal</code> class from the attack classes is to utilize two models in cascade. The fist model will be specialized in identifying rare anomalies (so all attacks except the DDOS ones) and the second model that is specialized in detecting connections from DDOS attacks.</p>
+<p>From the plot above we notice that the 3 most frequent classes for attack type are <code>smurf</code>, <code>neptune</code> and <code>normal</code>. All other attack types are very rare. The class <code>normal</code> represents normal connections that are not to be considered as cyber attacks. The classes <code>smurf</code> and <code>neptune</code> are DDOS attacks. DDOS attacks are a type of cyber attacks where attackers try to break a system by overloading it with requests, so it is natural that such kind of connections outweigh even normal connections.</p>
+<p>The strategy that I plan to utilize to model this behavior and to distinguish the <code>normal</code> class from the attack classes is to utilize two models in cascade. The fist model will be specialized in identifying rare anomalies (so all attacks except the DDOS ones) and the second model will be specialized in detecting connections from DDOS attacks.</p>
 <p>To better simulate a realistic scenario, where lables are not available, I will tackle the problem using unsupervised learning approaches and I will utilize the attack type lables only for the final model evaluation.</p>
 
 </div>
@@ -1877,7 +1934,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="define-target">Define Target<a class="anchor-link" href="#define-target">&#182;</a></h3><p>Given the considerations of the previous chapter, we define two target columns for the two problems. In the first target column <code>target_anomaly</code> we consider as positive classes the attack types that are not DDOS attacks and as negative class all other connections (thus including DDOS attacks) and for the second target column <code>target_ddos</code> we take as positive class connections related to DDOS attacks and we consider all other connections as negative class (thus including anomalous attacks as negative class in this case).</p>
+<h3 id="define-target">Define Target<a class="anchor-link" href="#define-target">&#182;</a></h3><p>Given the considerations of the previous chapter, we define two target columns for the two problems. For the first target column <code>target_anomaly</code> we consider as positive classes the attack types that are not DDOS attacks and as negative class all other connections (thus including DDOS attacks) and for the second target column <code>target_ddos</code> we take as positive class connections related to DDOS attacks and we consider all other connections as negative class (thus including anomalous attacks as negative class in this case).</p>
 
 </div>
 </div>
@@ -2199,70 +2256,6 @@ display(Markdown(f"For the second problem, we have an imbalance problem with an 
 
 </div>
 
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-11">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span>
-</pre></div>
-<div id="cell-11" class="clipboard-copy-txt"></div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span>
-</pre></div>
-<div id="cell-12" class="clipboard-copy-txt"></div>
-    
-        </div>
-    </div>
-
-</div>
 </div>
 
 </div>
