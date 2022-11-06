@@ -370,6 +370,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -455,6 +462,13 @@
         <li class="md-nav__item">
   <a href="#evaluation" class="md-nav__link">
     Evaluation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    Limitations
   </a>
   
 </li>
@@ -2682,6 +2696,18 @@ display(Markdown(f"- f1_score = {f1:.3f}\n- precision = {precision:.3f}\n- recal
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The results above seem very good. Even suspiciously good. I swear that I tried to find possible leakages, but at the time of writing I could not. This is a synthetic dataset and there could be a feature that predicts surprisingly good for DDOS attacks, or there might be a bug in the code that I did not spot yet. Either way, I will take these results for good and move on.</p>
 <p>On a different note, we see from the confusion matrix that this introduces almost 4k of false positives. This might not be very relevant in predicting DDOS attacks, however they will heavily deteriorate the performance of the overall model, which aims at detecting very rare classes.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="limitations">Limitations<a class="anchor-link" href="#limitations">&#182;</a></h2><p>It is worth noticing that <code>smurf</code> and <code>neptune</code> are not the only two exiting types of DDOS attacks. The fact that we are modelling our DDOS predictor in this way heavily impacts the ability of our model to detect and prevent other types of DDOS attacks.</p>
 
 </div>
 </div>

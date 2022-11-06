@@ -487,6 +487,34 @@ echo n | gunzip data/kddcup.data_10_percent.gz
 <h3 id="dataset-description">Dataset Description</h3>
 <p>"<em>This is the data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99 The Fifth International Conference on Knowledge Discovery and Data Mining. The competition task was to build a network intrusion detector, a predictive model capable of distinguishing between <code>bad</code> connections, called intrusions or attacks, and <code>good</code> normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment.</em>"</p>
 <p>source: <a href="http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html">KDD Cup 1999 Data</a></p>
+<p>Each row in our dataset contains a connection. Each connection has a label which could be <code>normal</code> for rows that represent normal connections or the type of cyberattack for for rows that represent cyber attacks.</p>
+<p>The dataset contain a total of 23 attack types, which are namely:</p>
+<ul>
+<li>back</li>
+<li>buffer_overflow</li>
+<li>ftp_write</li>
+<li>guess_passwd</li>
+<li>imap</li>
+<li>ipsweep</li>
+<li>land</li>
+<li>loadmodule</li>
+<li>multihop</li>
+<li>neptune</li>
+<li>nmap</li>
+<li>normal</li>
+<li>perl</li>
+<li>phf</li>
+<li>pod</li>
+<li>portsweep</li>
+<li>rootkit</li>
+<li>satan</li>
+<li>smurf</li>
+<li>spy</li>
+<li>teardrop</li>
+<li>warezclient</li>
+<li>warezmaster</li>
+</ul>
+<p>The attacks of type <code>neptune</code> and <code>smurf</code> are DDOS attacks. The others are mainly Remote to user.</p>
 <h4 id="features-description">Features Description</h4>
 <TABLE BORDER WIDTH="80%" NOSAVE >
 <TR NOSAVE>

@@ -21,6 +21,36 @@ echo n | gunzip data/kddcup.data_10_percent.gz
 
 source: [KDD Cup 1999 Data](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html)
 
+Each row in our dataset contains a connection. Each connection has a label which could be `normal` for rows that represent normal connections or the type of cyberattack for for rows that represent cyber attacks.
+
+The dataset contain a total of 23 attack types, which are namely:
+
+- back
+- buffer_overflow
+- ftp_write
+- guess_passwd
+- imap
+- ipsweep
+- land
+- loadmodule
+- multihop
+- neptune
+- nmap
+- normal
+- perl
+- phf
+- pod
+- portsweep
+- rootkit
+- satan
+- smurf
+- spy
+- teardrop
+- warezclient
+- warezmaster
+
+The attacks of type `neptune` and `smurf` are DDOS attacks. The others are mainly Remote to user.
+
 #### Features Description
 
 <TABLE BORDER WIDTH="80%" NOSAVE >
