@@ -21,7 +21,7 @@ In order to train and evaluate the model, data from the 1999 edition of the KDD 
 .
 ├── Makefile
 ├── data # Train data
-├── docs # Train data
+├── docs # Documentation + Notebooks
     └── notebooks # Notebooks stored here
 ├── frozen_models # Pre trained models
 ├── intrusion_detection # Source code
