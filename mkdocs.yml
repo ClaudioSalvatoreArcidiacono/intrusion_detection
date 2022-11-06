@@ -6,12 +6,11 @@ nav:
   - Data: data.md
   - Exploratory Data Analysis: notebooks/exploration/exploratory_data_analysis.ipynb
   - Target Definition: notebooks/exploration/target_definition.ipynb
+  - Feature Engineering: notebooks/exploration/feature_engineering.ipynb
 
 plugins:
   - search
   - mkdocs-jupyter:
-      # show_input: false
-      # no_input: true
       include_source: True
 
 theme:
