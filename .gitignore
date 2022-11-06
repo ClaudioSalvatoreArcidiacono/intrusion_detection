@@ -91,9 +91,5 @@ odi_db_config.yml
 config/db_config.yml
 design/.DS_Store
 .DS_Store
-notebooks/data/kddcup.names
-notebooks/data/kddcup.data_10_percent
-notebooks/data/kddcup.data_10_percent.gz
-data/kddcup.data_10_percent
-data/kddcup.names
+data/**
 site/**
