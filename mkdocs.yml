@@ -8,6 +8,8 @@ nav:
   - Target Definition: notebooks/exploration/target_definition.ipynb
   - Feature Engineering: notebooks/exploration/feature_engineering.ipynb
   - Modelling Anomalies: notebooks/modelling/modelling_anomalies.ipynb
+  - Modelling DDOS: notebooks/modelling/modelling_ddos.ipynb
+  - Combine Models: notebooks/modelling/modelling_anomalies+ddos.ipynb
 
 plugins:
   - search
